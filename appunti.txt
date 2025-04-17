@@ -1,0 +1,73 @@
+SVOLGIMENTO DELL'ESAME LARAVEL - ENGIM
+
+    Realizzare una mini-app “Gestione Libri” dove gli studenti possono:
+
+    Vedere una lista di libri 
+
+    Aggiungere un nuovo libro
+
+    Modificare un libro esistente (Bonus)
+
+    Eliminare un libro (Bonus)
+
+
+Stai creando un'applicazione per una piccola biblioteca. Gli utenti devono poter gestire una lista di libri (solo lato backend, niente autenticazione richiesta).
+
+REQUISITI:
+
+Modello Book
+
+    id (autoincrement)
+
+    titolo (string, richiesto)
+
+    autore (string, richiesto)
+
+    genere (string, richiesto)
+
+    anno (intero, opzionale)
+
+    descrizione (testo, opzionale)
+
+Migrazione
+
+    Creare la tabella books con i campi sopra indicati
+
+Rotte (web.php)
+
+    GET /books → mostra lista dei libri
+
+    GET /books/create → mostra form per nuovo libro
+
+    POST /books → salva libro
+
+    GET /books/{id}/edit → mostra form per modifica
+
+    PUT /books/{id} → aggiorna libro
+
+    DELETE /books/{id} → elimina libro
+
+Controller BookController
+
+    implementare tutte le funzioni CRUD
+
+    usare la validazione per title e author (richiesti)
+
+Blade views
+
+    index.blade.php: elenco libri con pulsanti modifica/elimina
+
+    create.blade.php e edit.blade.php: form di inserimento/modifica
+
+layout base opzionale (con @yield)
+
+✅ Criteri di valutazione (su 30 punti)
+
+Aspetto	                                Punti
+
+Migrazione corretta	                      5
+Rotte corrette e funzionanti	          5
+Controller completo con validazione	      8
+Views ben strutturate e funzionanti	      6
+Funzionalità CRUD funzionanti	          4
+Pulizia del codice / uso di Blade	      2
