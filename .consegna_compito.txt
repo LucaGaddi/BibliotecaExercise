@@ -1,4 +1,4 @@
-SVOLGIMENTO DELL'ESAME LARAVEL - ENGIM
+ESAME LARAVEL - ENGIM
 
     Realizzare una mini-app “Gestione Libri” dove gli studenti possono:
 
@@ -65,9 +65,9 @@ layout base opzionale (con @yield)
 
 Aspetto	                                Punti
 
-Migrazione corretta	                      5
+Migrazioni corrette	                      5
 Rotte corrette e funzionanti	          5
 Controller completo con validazione	      8
-Views ben strutturate e funzionanti	      6
-Funzionalità CRUD funzionanti	          4
-Pulizia del codice / uso di Blade	      2
+Views funzionanti / uso di Blade          2
+Funzionalità CRUD funzionanti	          6
+Pulizia del codice              	      4

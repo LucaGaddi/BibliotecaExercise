@@ -1,0 +1,100 @@
+✅ Requisiti
+Assicurati di avere installati:
+
+PHP (consigliata la versione ≥ 8.1)
+
+Composer (gestore pacchetti PHP)
+
+Puoi verificarli date terminale con:
+
+php -v
+composer -V
+
+***************
+
+Metodo 1: usando Composer (consigliato)
+
+composer create-project laravel/laravel nome-progetto
+
+***************
+
+Metodo 2: usando Laravel Installer (se già installato)
+
+laravel new nome-progetto
+
+Se non hai l'installer:
+
+composer global require laravel/installer
+
+Assicurati che ~/.composer/vendor/bin (o ~/.config/composer/vendor/bin su Linux/macOS) sia nel tuo PATH.
+
+***************
+
+⚙️ Se non usi Docker Avvia il server
+Vai nella cartella del progetto:
+
+cd nome-progetto
+Avvia il server:
+
+php artisan serve
+Apri http://localhost:8000 nel browser.
+
+⚙️ Configura ambiente .env
+Nel file .env puoi impostare DB, mail, ecc. Esempio per MySQL:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nome_database
+DB_USERNAME=tuo_utente
+DB_PASSWORD=tua_password
+
+***************
+
+✅ Comando per generare il model:
+
+php artisan make:model Book
+
+✅ Comando per generare la migrazione:
+
+php artisan make:migration create_books_table
+
+🛠 Passaggi successivi:
+
+Una volta che la creazione della tabella è stata delineata nel file di migrazione, eseguila:
+
+php artisan migrate
+
+✅ Creazione del controller BookController
+
+php artisan make:controller BookController --resource
+
+Questo comando crea app/Http/Controllers/BookController.php con i metodi:
+
+index()
+
+create()
+
+store()
+
+show() (non ci serve, possiamo ignorarlo)
+
+edit()
+
+update()
+
+destroy()
+
+✅ Registrazione delle rotte nel web.php
+
+use App\Http\Controllers\BookController;
+
+Route::resource('books', BookController::class);
+
+✅ (Facoltativo) Seeder per libri di esempio
+
+php artisan make:seeder BookSeeder
+
+Una volta compilati eseguili con:
+
+php artisan db:seed
